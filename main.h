@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
+#include <stdio.h>
 
 typedef struct flags
 {
@@ -11,7 +13,7 @@ typedef struct flags
 	int hash;
 } flags_t;
 
-
+int _printf(const char *format, ...);
 int print_char(va_list l, flags_t *f);
 int print_string(va_list l, flags_t *f);
 int print_percent(va_list l, flags_t *f);
